@@ -14,7 +14,7 @@ function main() {
 
         res.status(200).json({
             data: employees.slice(startIndex, endIndex),
-            length: employees.length,
+            total: employees.length,
         });
     });
 
