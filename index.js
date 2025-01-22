@@ -18,10 +18,6 @@ function main() {
         });
     });
 
-    app.listen(port, () => {
-        console.log(`Server listening at http://localhost:${port}`);
-    });
-
     app.get("/employee/:id", (req, res) => {
         const { id } = req.params;
 
@@ -36,6 +32,10 @@ function main() {
         }
 
         res.status(200).json(employee);
+    });
+
+    app.listen(port, () => {
+        console.log(`Server listening at http://localhost:${port}`);
     });
 }
 
