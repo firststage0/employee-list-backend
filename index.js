@@ -1,5 +1,5 @@
-import express from "express";
 import cors from "cors";
+import express from "express";
 import { employees } from "./employees.js";
 const app = express();
 const port = 8080;
@@ -14,6 +14,7 @@ function main() {
 
         res.status(200).json({
             data: employees.slice(startIndex, endIndex),
+            length: employees.length,
         });
     });
 
